@@ -1,0 +1,18 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int buy_today = Integer.MAX_VALUE;
+        int op = 0;
+        int current_profit = 0;
+        
+        for(int i = 0; i < prices.length; i++){
+            if(prices[i] < buy_today){
+                buy_today = prices[i];
+            }
+            current_profit = prices[i] - buy_today;
+            if(op < current_profit){
+                op = current_profit;
+            }
+        }
+        return op;
+    }
+}
