@@ -1,0 +1,27 @@
+
+public class Main {
+	
+	
+	static boolean isPal(int x) {
+		
+		int rev = 0;
+		int temp = x;
+		
+		while(temp!=0) {
+			int ld = temp%10;
+			rev = rev*10+ld;
+			temp = temp/10;
+		
+		}
+		return(rev==x);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		int num = 363;
+		System.out.println(isPal(num));
+
+	}
+
+}
