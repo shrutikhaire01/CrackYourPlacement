@@ -1,0 +1,26 @@
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int a = 12;
+		int b = 15;
+		
+		System.out.println(GCD(a,b));
+
+	}
+	
+	static int GCD(int a, int b) {
+		
+		if(b==0) {
+			return a;
+		}
+		
+		//Recursive call
+		else {
+			return GCD(b,a%b);
+		}
+		
+
+	}
+
+}
