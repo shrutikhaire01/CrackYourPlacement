@@ -1,0 +1,26 @@
+public class SelectionSort {
+    public static void main(String[] args) {
+        int[] array = {4, 56, 8, 4, 2};
+        selsort(array);
+        System.out.println("After Sorting:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    static void selsort(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n; i++) {
+            int small = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[small]) {
+                    small = j;
+                }
+            }
+            // Swap the found minimum element with the first element
+            int temp = array[small];
+            array[small] = array[i];
+            array[i] = temp;
+        }
+    }
+}
